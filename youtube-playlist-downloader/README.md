@@ -3,6 +3,8 @@
 This Python script allows you to download information about playlists created by a YouTube account, including both private and public playlists.
 This is useful for backing up your playlists or for analyzing the videos in your playlists.
 
+[![codecov](https://codecov.io/gh/siavashyj/toolbox/branch/main/graph/badge.svg)](https://codecov.io/gh/siavashyj/toolbox)
+
 ## Features
 
 - Authenticates with the YouTube API using OAuth 2.0
