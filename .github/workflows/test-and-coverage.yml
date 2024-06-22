@@ -29,3 +29,19 @@ jobs:
         cd youtube-playlist-downloader
         poetry run coverage run -m pytest
         poetry run coverage report
+        poetry run coverage report > coverage_report.txt
+    - name: Post coverage comment
+      uses: actions/github-script@v6
+      if: github.event_name == 'pull_request'
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+            const fs = require('fs')
+            const coverageReport = fs.readFileSync('youtube-playlist-downloader/coverage_report.txt', 'utf8')
+            const pullRequestId = context.payload.pull_request.number
+            github.rest.pulls.createComment({
+                issue_number: pullRequestId,
+                owner: context.repo.owner,
+                repo: context.repo.name,
+                body: '## Coverage Report\n```\n' + coverageReport + '\n```'
+            })
