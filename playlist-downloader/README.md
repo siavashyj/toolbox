@@ -1,6 +1,7 @@
 # YouTube Playlist Downloader
 
 This Python script allows you to download information about playlists created by a YouTube account, including both private and public playlists.
+This is useful for backing up your playlists or for analyzing the videos in your playlists.
 
 ## Features
 
@@ -32,6 +33,11 @@ Before you begin, ensure you have met the following requirements:
 
    If you don't have Poetry installed, you can install it from [here](https://python-poetry.org/docs/#installation).
 
+2. (Alternative) If you don't want to use Poetry, you can install the dependencies using pip:
+   ```
+   pip install -r requirements.txt
+   ```
+
 ## Setup
 
 1. Go to the [Google Developers Console](https://console.developers.google.com/).
@@ -46,6 +52,11 @@ Before you begin, ensure you have met the following requirements:
    ```
    poetry run python youtube_playlist_downloader.py
    ```
+    or
+    ```
+    python youtube_playlist_downloader.py
+    ```
+
 
 2. The first time you run the script, it will open a web browser and ask you to authorize the application. Follow the prompts to grant access to your YouTube account.
 
