@@ -27,11 +27,5 @@ jobs:
     - name: Run tests with pytest and coverage
       run: |
         cd youtube-playlist-downloader
-        poetry run pytest tests --cov=. --cov-report=xml
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./youtube-playlist-downloader/coverage.xml
-        flags: unittests
-        fail_ci_if_error: true
+        poetry run coverage run -m pytest
+        poetry run coverage report
