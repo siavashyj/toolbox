@@ -78,6 +78,14 @@ My Favorite Song: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 Contributions to this project are welcome. Please feel free to submit a Pull Request.
 
+## Unit Tests
+
+To run the unit tests, use the following command:
+```
+poetry run pytest
+```
+
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
