@@ -161,5 +161,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# ignore data files
 client_secrets.json
 *.pickle
+*.json*
+*.parquet*
+*.csv*
+*.pkl*
