@@ -72,7 +72,7 @@ uv run flake8 main.py tests/
 
 ## Configuration
 
-- Black formatter: 120 character line length, Python 3.8+ target
+- Black formatter: 120 character line length, Python 3.10+ target
 - isort: Black-compatible profile
 - pytest: Tests in `tests/` directory
 - uv: Primary dependency manager using pyproject.toml, pip fallback via `requirements.txt`

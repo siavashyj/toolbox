@@ -39,4 +39,5 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./youtube-playlist-downloader/coverage.xml
         flags: unittests
+        slug: siavashyj/toolbox
         fail_ci_if_error: true
