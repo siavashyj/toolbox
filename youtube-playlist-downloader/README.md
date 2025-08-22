@@ -28,14 +28,14 @@ Before you begin, ensure you have met the following requirements:
    cd youtube-playlist-downloader
    ```
 
-2. Install the required dependencies using Poetry:
+2. Install the required dependencies using uv:
    ```
-   poetry install
+   uv sync --dev
    ```
 
-   If you don't have Poetry installed, you can install it from [here](https://python-poetry.org/docs/#installation).
+   If you don't have uv installed, you can install it from [here](https://docs.astral.sh/uv/getting-started/installation/).
 
-2. (Alternative) If you don't want to use Poetry, you can install the dependencies using pip:
+2. (Alternative) If you don't want to use uv, you can install the dependencies using pip:
    ```
    pip install -r requirements.txt
    ```
@@ -52,11 +52,11 @@ Before you begin, ensure you have met the following requirements:
 
 1. Run the script:
    ```
-   poetry run python youtube_playlist_downloader.py
+   uv run python main.py
    ```
     or
     ```
-    python youtube_playlist_downloader.py
+    python main.py
     ```
 
 
@@ -84,7 +84,7 @@ Contributions to this project are welcome. Please feel free to submit a Pull Req
 
 To run the unit tests, use the following command:
 ```
-poetry run pytest
+uv run pytest
 ```
 
 

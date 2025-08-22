@@ -30,9 +30,14 @@ def mock_youtube_service():
 
 
 def test_get_authenticated_service():
-    with patch("main.build") as mock_build, patch("main.InstalledAppFlow.from_client_secrets_file") as mock_flow, patch(
-        "builtins.open", new_callable=mock_open
-    ) as _, patch("pickle.dump") as _, patch("pickle.load") as mock_load, patch("os.path.exists", return_value=False):
+    with (
+        patch("main.build") as mock_build,
+        patch("main.InstalledAppFlow.from_client_secrets_file") as mock_flow,
+        patch("builtins.open", new_callable=mock_open) as _,
+        patch("pickle.dump") as _,
+        patch("pickle.load") as mock_load,
+        patch("os.path.exists", return_value=False),
+    ):
 
         mock_credentials = Mock()
         mock_flow.return_value.run_local_server.return_value = mock_credentials
