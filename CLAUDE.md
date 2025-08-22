@@ -11,13 +11,13 @@ This is a toolbox repository containing Python utilities. The main project is `y
 ### Python Environment Setup
 ```bash
 cd youtube-playlist-downloader
-poetry install
+uv sync --dev
 ```
 
 ### Running the Application
 ```bash
-# Using Poetry (recommended)
-poetry run python main.py
+# Using uv (recommended)
+uv run python main.py
 
 # Or with pip-installed dependencies
 python main.py
@@ -26,22 +26,22 @@ python main.py
 ### Testing
 ```bash
 # Run all tests
-poetry run pytest
+uv run pytest
 
 # Run tests with coverage
-poetry run pytest --cov=main
+uv run pytest --cov=main
 ```
 
 ### Code Quality
 ```bash
 # Format code
-poetry run black main.py tests/
+uv run black main.py tests/
 
 # Sort imports
-poetry run isort main.py tests/
+uv run isort main.py tests/
 
 # Lint code
-poetry run flake8 main.py tests/
+uv run flake8 main.py tests/
 ```
 
 ## Architecture
@@ -62,7 +62,7 @@ poetry run flake8 main.py tests/
 
 **Output Format:**
 - Creates `downloaded_playlists/` directory
-- Two files per playlist: 
+- Two files per playlist:
   - `{playlist_name}.txt` - Human-readable format with titles and URLs
   - `{playlist_name}_ytdl.txt` - YouTube-dl compatible URL list
 
@@ -75,7 +75,7 @@ poetry run flake8 main.py tests/
 - Black formatter: 120 character line length, Python 3.8+ target
 - isort: Black-compatible profile
 - pytest: Tests in `tests/` directory
-- Poetry: Primary dependency manager, pip fallback via `requirements.txt`
+- uv: Primary dependency manager using pyproject.toml, pip fallback via `requirements.txt`
 
 ## Testing Strategy
 
